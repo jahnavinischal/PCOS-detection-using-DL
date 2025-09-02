@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result Page</title>
+<style>
+    body {  
+        background-color: #f3cfdc; /* Peach-baby pink background color */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        color: #880e4f;
+    }
+    .result-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Result</h1>
+    <!-- <p><strong>Detection of Result:</strong> [Your detection result here]</p> -->
+    <p><strong>Detection of Result:</strong> <div class = "result-box"></div></p>
+
+    <!-- <p><strong>Accuracy of Detection:</strong> </p>
+    <div class="result-box"> -->
+        <!-- Put other content inside this box if needed -->
+    </div>
+    <div>
+        <table style="border: 1px solid black; margin: 0px auto;" class="center">
+            <!-- <thead>
+              <tr>
+                <th>PCOS</th>
+                <th>Number and size of cysts</th>
+              </tr>
+            </thead> -->
+            <tbody>
+              <tr>
+                <td>PCOS: </td>
+                <td>{{predictions}}</td>
+              </tr>
+              <!-- <tr>
+                <td>Size and no. of cysts</td>
+                <td>{{thresholded}}</td>
+              </tr> -->
+            </tbody>
+            </table>
+        <!-- <h1> <b> FORM DETAILS</b> </h1> -->
+            <h3>PCOS: {{predictions}}</h3>
+            <!-- <h3>Size and no.of cysts: {{thresholded}}</h3> -->
+     </div>
+</div>
+</body>
+</html>

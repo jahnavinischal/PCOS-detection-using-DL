@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-color: #fce4ec; /* Light Pink */
+            color: #880e4f; /* Dark Pink */
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            font-size: 32px; /* Larger font for title */
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"], 
+        .form-group select {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+        .btn {
+            background-color: #880e4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            background-color: #c8e6c9; /* Light Green */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success-message a {
+            color: #388e3c; /* Dark Green */
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function checkDesignation() {
+            const designation = document.getElementById("designation").value;
+            const certificatesGroup = document.getElementById("certificates-group");
+            
+            if (designation === "radiologist" || designation === "doctor") {
+                certificatesGroup.style.display = "block"; // Show the certificates upload field
+            } else {
+                certificatesGroup.style.display = "none"; // Hide the certificates upload field
+            }
+        }
+
+        function handleSignup(event) {
+            event.preventDefault(); // Prevent form submission
+            const userId = "UID-" + Math.floor(Math.random() * 100000); // Generate a unique user ID
+
+            // Display the success message and unique user ID
+            document.querySelector(".container").style.display = "none";
+            const successMessage = document.querySelector(".success-message");
+            successMessage.querySelector(".user-id").textContent = userId;
+            successMessage.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <div class="container">
+        <form onsubmit="handleSignup(event)">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation</label>
+                <select id="designation" name="designation" onchange="checkDesignation()" required>
+                    <option value="" disabled selected>Select designation</option>
+                    <option value="radiologist">Radiologist</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                </select>
+            </div>
+            <div class="form-group" id="certificates-group" style="display: none;">
+                <label for="certificates">Upload Certificates</label>
+                <input type="file" id="certificates" name="certificates" accept=".pdf,.doc,.docx">
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="success-message">
+        Registration successful! Your unique user ID is: 
+        <span class="user-id"></span>
+        <br>
+        <a href="/">Click here to return to the home page.</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!-- <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.*" %> -->
+
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.css">
+    <!-- <title>WRITZY | Login</title>
+    <title>Writzy</title> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?
+family=Texturina:opsz,wght@12..72,500&display=swap" 
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+<!-- Responsive-->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/responsive.css') }}">
+<!-- fevicon -->
+<link rel="icon"  type="image/gif" href="{{ url_for('static',filename='images/fevicon.png') }}">
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.min.css') }}">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+
+    <section class="header">
+        <!-- <h1 style="color:rgb(66, 27, 27);"><small>WRITZY</small></h1> -->
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <img src="static\images\logo.jpg" width="120" height="90"  alt="logo" class="logo"/> 
+                
+<!--               <img src="logo.png" class="logo">-->
+                <ul class="left-align">                
+
+                    
+                    <li><a href="{{ url_for('welcome')}}">HOME</a></li>
+                    <li><a href="{{ url_for('faq_page')}}">FAQ</a></li>
+                    <li><a href="{{ url_for('login_page')}}">LOGIN</a></li> 
+                    <li><a href="{{ url_for('signup_page')}}">SIGNUP</a></li>
+                    <li><a href="{{ url_for('clinical_page')}}">CLINICAL REPORTS</a></li>
+                    <li><a href="{{ url_for('main_page')}}">ULTRASOUND REPORTS</a></li>
+                    <!-- <li><a href="http://127.0.0.1:5500/template/result.html">RESULTS</a></li> -->
+                    <li><a href="{{ url_for('contact_page')}}">CONTACT</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <h1 style="text-align: left;">OVACARE</h1>
+        <p style="text-align: left;"><big>Struggling with irregular periods?<br>Painful periods?<br>Struggling with weight gain?<br>Cannot resist but think if you are suffering from PCOS(Poly Cystic Ovary Syndrome)?<br>Well we got you covered!</big></p>
+        <a href="http://127.0.0.1:5500/template/clinical.html" class="hero-btn">Upload your reports here</a>
+
+ </div>
+ <div class="container">
+    <!-- <img class="image" src="web/img/img.jpg" > -->
+    <img src="static\images\cover.png", " width="1400px", height="250px" , style="margin-left: -420px; margin-top: -70px; margin-bottom: 30px;">
+    <!-- <img src="images/cover.png" style="width: 100%; height: 200px; margin-top: -70px; margin-bottom: 30px;"> -->
+</div>
+
+    </section>
+</body>
+</html>

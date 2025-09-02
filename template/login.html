@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #f3cfdc; /* Light Pink */
+            color: #880e4f; /* Dark Pink */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .login-container {
+            margin: 60px auto;
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .login-button {
+            background-color: #880e4f; /* Dark Pink */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .success-message {
+            display: none;
+            background-color: #c8e6c9; /* Light Green */
+            color: #388e3c; /* Dark Green */
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSuccessMessage() {
+            // Hide the login form and show the success message
+            document.querySelector('.login-container').style.display = 'none';
+            document.querySelector('.success-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <div class="login-container">
+        <form onsubmit="showSuccessMessage(); return false;">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button class="login-button" type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="success-message">
+        Login successful! <a href="/">Click here to return to the home page.</a>
+    </div>
+</body>
+</html>

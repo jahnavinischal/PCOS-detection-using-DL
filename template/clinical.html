@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinical Details</title>
+<style>
+    body {
+        background-color: #fce4ec; /* light baby pink */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 50%;
+        margin: 50px auto;
+        text-align: center;
+    }
+    h1 {
+        color: #880e4f; /* dark pink */
+    }
+    .form-container {
+        background-color: #fff; /* white container */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add shadow */
+        margin-top: 20px;
+    }
+    form{
+        text-align: left;
+    }
+    .submit-btn, .redirect-btn{
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #880e4f; /* dark pink */
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .redirect-btn, .submit-btn {
+        padding: 10px 20px;
+        background-color: #880e4f; /* dark pink */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size:medium;
+    }
+    .redirect-btn:hover, .submit-btn:hover {
+        background-color: #ad1457; /* darker pink on hover */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Clinical Details</h1>
+    <div class="form-container">
+        <form action="http://127.0.0.1:5500/template/result.html" method="post" enctype="multipart/form-data">
+            <label for="name">Enter name of the patient:</label>
+            <input type="text" id="names" name="name" placeholder="Eg. John Smith" required />
+            <label for="age">Enter the patient ID:</label>
+            <input type="text" id="patient id" name="patient id" placeholder="Eg. john123" >
+            <label for="gender">Enter Haemoglobin(Hb) level(in g/dl):</label>
+            <input type="text" id="hb level" name="hb level" placeholder="Eg. 12.4" >
+            <label for="diagnosis">Enter blood pressure(in mm/Hg):</label>
+            <input type="text" id="bp" name="bp" placeholder="Eg. 129/86" >
+            <label for="treatment">Enter Vitamin-D level(in ng/mL):</label>
+            <input type="text" id="vit-D" name="vit-D" placeholder="Eg. 31" >
+            <!-- <input type="submit" value="Submit report" class="submit-btn"> -->
+            <a href="http://127.0.0.1:5500/template/reports.html" class="submit-btn redirect-btn">Upload Ultrasound Report</a>
+        </form>
+        <form action="http://127.0.0.1:5500/template/result.html" method="post">
+            <input type="submit" value="Submit report" class="submit-btn">
+        </form>
+        <!-- </form> -->
+        
+        <!-- <form action="reports.html" method="post">
+            <input type="button" value="Upload ultrasound report" class="redirect-btn"><br>
+            <input type="submit" value="Submit report" class="submit-btn">
+        </form> -->
+    </div>
+</div>
+</body>
+</html>

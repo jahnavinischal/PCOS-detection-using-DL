@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Example</title>
+    <style>
+        body {  
+            background-color: #fce4ec; /* Peach-baby pink background color */
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 0;
+            
+        }
+        .faq {
+            margin-top: 50px; 
+            margin-bottom: 20px;
+            border: 1px solid #f8f8f8;
+            padding: 10px;
+            background-color: white
+        }
+
+        .container {
+        color:#880e4f;
+        }
+
+        .question {
+            cursor: pointer;
+            color: #880e4f
+        }
+        .answer {
+            display: none;
+        }
+        .arrow {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>FAQs</h1>
+
+<div class="faq">
+
+    <div class="question"> What is PCOS?<span class="arrow">►</span></div>
+    <div class="answer">PCOS stands for Polycystic Ovary Syndrome, which is a hormonal disorder common among women of reproductive age.</div>
+</div>
+
+<div class="faq">
+    <div class="question">Is it mandatory to upload USG image along with clinical details?<span class="arrow">►</span></div>
+    <div class="answer">Yes, it is usually required to upload the USG (Ultrasound) image along with clinical details for proper diagnosis and treatment.</div>
+</div>
+
+<div class="faq">
+    <div class="question">Is my data secure and confidential?<span class="arrow">►</span></div>
+    <div class="answer">Yes, we take the security and confidentiality of your data seriously. All information provided is kept secure and confidential.</div>
+</div>
+
+<div class="faq">
+    <div class="question">Where do I upload USG image?<span class="arrow">►</span></div>
+    <div class="answer">You can upload your USG (Ultrasound) image in the designated section on our platform.</div>
+</div>
+
+
+
+<script>
+    document.querySelectorAll('.faq .question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const arrow = question.querySelector('.arrow');
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                answer.style.display = 'none';
+                arrow.textContent = '►';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Flask
+Werkzeug
+tensorflow-cpu
+keras
+opencv-python
+matplotlib
+numpy 

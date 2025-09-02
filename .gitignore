@@ -1,0 +1,6 @@
+*.h5
+*.json
+original_app.py
+uploads/
+__pycache__/
+.venv/
