@@ -129,31 +129,24 @@ Add screenshots of the application:
 
 ### Home Page
 
-```md
 (<img width="1915" height="932" alt="image" src="https://github.com/user-attachments/assets/d66553f6-cd2b-422d-84b9-f994e57fbecb" />)
 *Screenshot of home page*
-```
 
 ### Upload Interface
 
-```md
 (<img width="1907" height="929" alt="image" src="https://github.com/user-attachments/assets/fb2504c1-c13c-4bc2-b6d9-d9ffa62f87a2" />)
 *Screenshot of upload page*
-```
 
 ### Prediction Result
 
-```md
 (<img width="1859" height="927" alt="image" src="https://github.com/user-attachments/assets/5a494b5b-973e-41b3-b63f-52ec9692cb92" />)
 *Screenshot of prediction*
-```
+
 
 ### Explainable AI Visualization
 
-```md
 (<img width="705" height="772" alt="image" src="https://github.com/user-attachments/assets/a0cc6073-5948-47eb-a4d9-981d8c3f9d93" />)
 *Comparison with XAI visualization*
-```
 
 ---
 
